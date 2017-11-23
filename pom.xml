@@ -24,6 +24,7 @@
     <module>dist</module>
     <module>broker-api</module>
     <module>client-java-api</module>
+    <module>test</module>
   </modules>
 
   <repositories>
