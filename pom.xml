@@ -22,6 +22,8 @@
     <module>protocol-test-util</module>
     <module>samples</module>
     <module>dist</module>
+    <module>broker-api</module>
+    <module>client-java-api</module>
   </modules>
 
   <repositories>
