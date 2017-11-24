@@ -19,7 +19,7 @@ import java.util.concurrent.CompletableFuture;
 
 import org.slf4j.Logger;
 
-import io.zeebe.client.event.EventMetadata;
+import io.zeebe.client.api.event.EventMetadata;
 import io.zeebe.client.event.impl.GeneralEventImpl;
 import io.zeebe.client.impl.Loggers;
 import io.zeebe.transport.RemoteAddress;

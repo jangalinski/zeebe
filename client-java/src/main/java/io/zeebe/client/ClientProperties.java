@@ -17,8 +17,8 @@ package io.zeebe.client;
 
 import java.util.Properties;
 
-import io.zeebe.client.task.TaskHandler;
-import io.zeebe.client.task.TaskSubscription;
+import io.zeebe.client.api.task.TaskHandler;
+import io.zeebe.client.api.task.TaskSubscription;
 
 public class ClientProperties
 {

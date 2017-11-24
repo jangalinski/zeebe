@@ -19,16 +19,15 @@ import java.util.List;
 import java.util.Properties;
 import java.util.function.Supplier;
 
-import org.junit.rules.ExternalResource;
-
-import io.zeebe.client.TasksClient;
-import io.zeebe.client.TopicsClient;
-import io.zeebe.client.WorkflowsClient;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.clustering.impl.TopicLeader;
-import io.zeebe.client.clustering.impl.TopologyResponse;
+import io.zeebe.client.api.TasksClient;
+import io.zeebe.client.api.TopicsClient;
+import io.zeebe.client.api.WorkflowsClient;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.clustering.TopicLeader;
+import io.zeebe.client.api.clustering.TopologyResponse;
 import io.zeebe.client.impl.ZeebeClientImpl;
 import io.zeebe.transport.ClientTransport;
+import org.junit.rules.ExternalResource;
 
 public class ClientRule extends ExternalResource
 {

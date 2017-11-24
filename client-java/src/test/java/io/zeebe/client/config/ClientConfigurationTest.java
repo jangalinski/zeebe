@@ -23,7 +23,7 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.client.impl.ZeebeClientImpl;
 import io.zeebe.test.broker.protocol.brokerapi.StubBrokerRule;
 import io.zeebe.transport.ClientTransport;

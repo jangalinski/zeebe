@@ -23,12 +23,16 @@ import java.util.List;
 
 import io.zeebe.broker.it.ClientRule;
 import io.zeebe.broker.it.EmbeddedBrokerRule;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.event.*;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.TopicEventType;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.event.WorkflowInstanceEventHandler;
 import io.zeebe.model.bpmn.Bpmn;
 import io.zeebe.model.bpmn.instance.WorkflowDefinition;
 import io.zeebe.test.util.TestUtil;
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.RuleChain;
 
 public class WorkflowInstanceTopicSubscriptionTest

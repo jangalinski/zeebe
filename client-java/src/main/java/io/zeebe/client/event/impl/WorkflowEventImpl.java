@@ -20,8 +20,8 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import io.zeebe.client.event.TopicEventType;
-import io.zeebe.client.event.WorkflowEvent;
+import io.zeebe.client.api.event.TopicEventType;
+import io.zeebe.client.api.event.WorkflowEvent;
 
 public class WorkflowEventImpl extends EventImpl implements WorkflowEvent
 {

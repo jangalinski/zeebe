@@ -23,7 +23,10 @@ import java.util.List;
 
 import io.zeebe.broker.it.ClientRule;
 import io.zeebe.broker.it.EmbeddedBrokerRule;
-import io.zeebe.client.event.*;
+import io.zeebe.client.api.event.DeploymentEvent;
+import io.zeebe.client.api.event.TopicEventType;
+import io.zeebe.client.api.event.WorkflowEvent;
+import io.zeebe.client.api.event.WorkflowEventHandler;
 import io.zeebe.model.bpmn.Bpmn;
 import io.zeebe.model.bpmn.instance.WorkflowDefinition;
 import io.zeebe.test.util.TestUtil;
@@ -52,8 +55,8 @@ public class WorkflowTopicSubscriptionTest
     {
         // given
         final DeploymentEvent deploymentResult = clientRule.workflows().deploy(clientRule.getDefaultTopic())
-            .addWorkflowModel(WORKFLOW, "workflow.bpmn")
-            .execute();
+                                                           .addWorkflowModel(WORKFLOW, "workflow.bpmn")
+                                                           .execute();
 
         final RecordingWorkflowEventHandler handler = new RecordingWorkflowEventHandler();
 

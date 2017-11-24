@@ -27,13 +27,16 @@ import java.util.concurrent.TimeUnit;
 
 import io.zeebe.broker.Broker;
 import io.zeebe.broker.it.ClientRule;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.clustering.impl.TopicLeader;
-import io.zeebe.client.event.DeploymentEvent;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.clustering.TopicLeader;
+import io.zeebe.client.api.event.DeploymentEvent;
 import io.zeebe.model.bpmn.Bpmn;
 import io.zeebe.model.bpmn.instance.WorkflowDefinition;
 import io.zeebe.test.util.AutoCloseableRule;
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Rule;
+import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.Timeout;
@@ -249,8 +252,8 @@ public class DeploymentClusteredTest
     private long getLeadersOfTopic(final String topic)
     {
         final List<TopicLeader> topicLeaders = clientRule.getClient().requestTopology()
-            .execute()
-            .getTopicLeaders();
+                                                         .execute()
+                                                         .getTopicLeaders();
 
         return topicLeaders.stream()
                 .filter(t -> topic.equals(t.getTopicName()))

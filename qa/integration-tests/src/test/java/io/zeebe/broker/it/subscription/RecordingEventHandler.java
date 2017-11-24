@@ -24,10 +24,10 @@ import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.zeebe.client.event.EventMetadata;
-import io.zeebe.client.event.GeneralEvent;
-import io.zeebe.client.event.UniversalEventHandler;
-import io.zeebe.client.event.TopicEventType;
+import io.zeebe.client.api.event.EventMetadata;
+import io.zeebe.client.api.event.GeneralEvent;
+import io.zeebe.client.api.event.TopicEventType;
+import io.zeebe.client.api.event.UniversalEventHandler;
 
 public class RecordingEventHandler implements UniversalEventHandler
 {

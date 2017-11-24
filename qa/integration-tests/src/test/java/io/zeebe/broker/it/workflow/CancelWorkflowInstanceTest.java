@@ -25,11 +25,13 @@ import java.time.Duration;
 import io.zeebe.broker.it.ClientRule;
 import io.zeebe.broker.it.EmbeddedBrokerRule;
 import io.zeebe.broker.it.util.TopicEventRecorder;
-import io.zeebe.client.event.WorkflowInstanceEvent;
-import io.zeebe.client.task.PollableTaskSubscription;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.task.PollableTaskSubscription;
 import io.zeebe.model.bpmn.Bpmn;
 import io.zeebe.model.bpmn.instance.WorkflowDefinition;
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 

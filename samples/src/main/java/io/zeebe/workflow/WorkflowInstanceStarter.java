@@ -19,9 +19,9 @@ import java.util.Properties;
 import java.util.stream.Collectors;
 
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.client.cmd.ClientCommandRejectedException;
-import io.zeebe.client.event.DeploymentEvent;
+import io.zeebe.client.api.event.DeploymentEvent;
 import io.zeebe.client.impl.ZeebeClientImpl;
 
 public class WorkflowInstanceStarter

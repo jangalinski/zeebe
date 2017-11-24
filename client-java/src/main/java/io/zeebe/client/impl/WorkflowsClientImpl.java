@@ -15,12 +15,12 @@
  */
 package io.zeebe.client.impl;
 
-import io.zeebe.client.WorkflowsClient;
-import io.zeebe.client.cmd.Request;
-import io.zeebe.client.event.WorkflowInstanceEvent;
-import io.zeebe.client.workflow.cmd.CreateDeploymentCommand;
-import io.zeebe.client.workflow.cmd.CreateWorkflowInstanceCommand;
-import io.zeebe.client.workflow.cmd.UpdatePayloadCommand;
+import io.zeebe.client.api.WorkflowsClient;
+import io.zeebe.client.api.cmd.Request;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.workflow.cmd.CreateDeploymentCommand;
+import io.zeebe.client.api.workflow.cmd.CreateWorkflowInstanceCommand;
+import io.zeebe.client.api.workflow.cmd.UpdatePayloadCommand;
 import io.zeebe.client.workflow.impl.CancelWorkflowInstanceCmdImpl;
 import io.zeebe.client.workflow.impl.CreateDeploymentCommandImpl;
 import io.zeebe.client.workflow.impl.CreateWorkflowInstanceCommandImpl;

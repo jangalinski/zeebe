@@ -14,4 +14,14 @@
   <artifactId>zeebe-client-java-api</artifactId>
 
 
+  <dependencies>
+    <dependency>
+      <groupId>io.zeebe</groupId>
+      <artifactId>zb-transport</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.zeebe</groupId>
+      <artifactId>zb-bpmn-model</artifactId>
+    </dependency>
+  </dependencies>
 </project>

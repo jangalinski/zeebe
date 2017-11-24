@@ -25,7 +25,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import io.zeebe.broker.it.ClientRule;
 import io.zeebe.broker.it.EmbeddedBrokerRule;
 import io.zeebe.broker.it.util.RecordingTaskHandler;
-import io.zeebe.client.event.TaskEvent;
+import io.zeebe.client.api.event.TaskEvent;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;

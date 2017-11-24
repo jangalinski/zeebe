@@ -17,6 +17,8 @@ package io.zeebe.client.event;
 
 import java.util.function.Predicate;
 
+import io.zeebe.client.api.event.GeneralEvent;
+
 public class FailingHandler extends RecordingEventHandler
 {
 

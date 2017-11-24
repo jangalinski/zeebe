@@ -23,7 +23,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 
-import io.zeebe.client.WorkflowsClient;
+import io.zeebe.client.api.WorkflowsClient;
 import io.zeebe.client.cmd.ClientCommandRejectedException;
 import io.zeebe.client.impl.data.MsgPackConverter;
 import io.zeebe.client.util.ClientRule;

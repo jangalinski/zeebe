@@ -15,7 +15,7 @@
  */
 package io.zeebe.client.event.impl;
 
-import io.zeebe.client.event.TopicEventType;
+import io.zeebe.client.api.event.TopicEventType;
 import io.zeebe.protocol.clientapi.EventType;
 
 public class EventTypeMapping

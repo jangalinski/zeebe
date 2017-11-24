@@ -17,8 +17,8 @@ package io.zeebe.test;
 
 import java.time.Duration;
 
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -46,9 +46,9 @@ public class WorkflowTest
     public void shouldCompleteWorkflowInstance()
     {
         final WorkflowInstanceEvent workflowInstance = client.workflows().create(topic)
-            .bpmnProcessId("process")
-            .latestVersion()
-            .execute();
+                                                             .bpmnProcessId("process")
+                                                             .latestVersion()
+                                                             .execute();
 
         client.tasks().newTaskSubscription(topic)
             .taskType("task")

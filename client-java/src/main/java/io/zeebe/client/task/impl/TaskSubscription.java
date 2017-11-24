@@ -18,7 +18,7 @@ package io.zeebe.client.task.impl;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import io.zeebe.client.impl.cmd.ReceiverAwareResponseResult;
-import io.zeebe.client.task.impl.subscription.EventSubscriptionCreationResult;
+import io.zeebe.client.api.task.subscription.EventSubscriptionCreationResult;
 import io.zeebe.transport.RemoteAddress;
 
 public class TaskSubscription implements EventSubscriptionCreationResult, ReceiverAwareResponseResult

@@ -18,12 +18,12 @@ package io.zeebe.client.task.impl;
 import java.io.InputStream;
 import java.util.Map;
 
-import io.zeebe.client.event.TaskEvent;
+import io.zeebe.client.api.event.TaskEvent;
 import io.zeebe.client.event.impl.TaskEventImpl;
 import io.zeebe.client.impl.RequestManager;
 import io.zeebe.client.impl.cmd.CommandImpl;
 import io.zeebe.client.impl.data.MsgPackConverter;
-import io.zeebe.client.task.cmd.CreateTaskCommand;
+import io.zeebe.client.api.task.cmd.CreateTaskCommand;
 import io.zeebe.util.EnsureUtil;
 
 public class CreateTaskCommandImpl extends CommandImpl<TaskEvent> implements CreateTaskCommand

@@ -15,8 +15,8 @@
  */
 package io.zeebe.client.event.impl;
 
-import io.zeebe.client.event.GeneralEvent;
-import io.zeebe.client.event.TopicEventType;
+import io.zeebe.client.api.event.GeneralEvent;
+import io.zeebe.client.api.event.TopicEventType;
 import io.zeebe.client.impl.data.MsgPackConverter;
 import io.zeebe.client.task.impl.subscription.MsgPackField;
 

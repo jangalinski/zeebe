@@ -20,8 +20,8 @@ import static io.zeebe.perftest.CommonProperties.DEFAULT_TOPIC_NAME;
 import java.util.concurrent.Future;
 import java.util.function.Supplier;
 
-import io.zeebe.client.TasksClient;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.TasksClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.perftest.helper.MaxRateThroughputTest;
 
 

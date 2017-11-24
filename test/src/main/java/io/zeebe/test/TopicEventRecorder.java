@@ -22,10 +22,10 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import io.zeebe.client.TopicsClient;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.event.TopicSubscription;
-import io.zeebe.client.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.TopicsClient;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.event.TopicSubscription;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
 import org.junit.rules.ExternalResource;
 
 public class TopicEventRecorder extends ExternalResource

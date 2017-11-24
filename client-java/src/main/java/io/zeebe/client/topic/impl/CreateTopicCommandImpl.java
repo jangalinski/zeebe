@@ -15,7 +15,8 @@
  */
 package io.zeebe.client.topic.impl;
 
-import io.zeebe.client.event.Event;
+import io.zeebe.client.api.event.Event;
+import io.zeebe.client.api.topic.TopicEventType;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.impl.RequestManager;
 import io.zeebe.client.impl.cmd.CommandImpl;

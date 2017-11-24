@@ -17,16 +17,15 @@ package io.zeebe.broker.it.network;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import io.zeebe.broker.it.ClientRule;
+import io.zeebe.broker.it.EmbeddedBrokerRule;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.test.util.TestUtil;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 import org.junit.rules.Timeout;
-
-import io.zeebe.broker.it.ClientRule;
-import io.zeebe.broker.it.EmbeddedBrokerRule;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.test.util.TestUtil;
 
 public class ClientReconnectTest
 {

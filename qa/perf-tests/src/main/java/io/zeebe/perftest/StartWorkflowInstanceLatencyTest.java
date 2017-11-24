@@ -21,8 +21,8 @@ import java.util.Properties;
 import java.util.concurrent.Future;
 import java.util.function.Supplier;
 
-import io.zeebe.client.WorkflowsClient;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.WorkflowsClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.model.bpmn.Bpmn;
 import io.zeebe.model.bpmn.instance.WorkflowDefinition;
 import io.zeebe.perftest.helper.FixedRateLatencyTest;

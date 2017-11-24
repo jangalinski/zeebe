@@ -18,7 +18,7 @@ package io.zeebe.client.topic.impl;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import io.zeebe.client.event.TopicEventType;
+import io.zeebe.client.api.event.TopicEventType;
 import io.zeebe.client.event.impl.EventImpl;
 
 public class TopicEventImpl extends EventImpl

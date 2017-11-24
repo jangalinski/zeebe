@@ -20,8 +20,8 @@ import java.time.Duration;
 import io.zeebe.client.clustering.impl.ClientTopologyManager;
 import io.zeebe.client.impl.TasksClientImpl;
 import io.zeebe.client.impl.data.MsgPackMapper;
-import io.zeebe.client.task.TaskHandler;
-import io.zeebe.client.task.TaskSubscriptionBuilder;
+import io.zeebe.client.api.task.TaskHandler;
+import io.zeebe.client.api.task.TaskSubscriptionBuilder;
 import io.zeebe.util.EnsureUtil;
 
 public class TaskSubscriptionBuilderImpl implements TaskSubscriptionBuilder

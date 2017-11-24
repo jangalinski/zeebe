@@ -26,11 +26,13 @@ import io.zeebe.broker.it.ClientRule;
 import io.zeebe.broker.it.EmbeddedBrokerRule;
 import io.zeebe.broker.it.util.RecordingTaskHandler;
 import io.zeebe.broker.it.util.TopicEventRecorder;
-import io.zeebe.client.TasksClient;
-import io.zeebe.client.WorkflowsClient;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.event.WorkflowInstanceEvent;
-import org.junit.*;
+import io.zeebe.client.api.TasksClient;
+import io.zeebe.client.api.WorkflowsClient;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 

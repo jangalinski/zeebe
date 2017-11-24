@@ -23,11 +23,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import io.zeebe.broker.it.ClientRule;
 import io.zeebe.broker.it.EmbeddedBrokerRule;
 import io.zeebe.broker.it.util.TopicEventRecorder;
-import io.zeebe.client.WorkflowsClient;
+import io.zeebe.client.api.WorkflowsClient;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
 import io.zeebe.client.cmd.ClientCommandRejectedException;
-import io.zeebe.client.event.WorkflowInstanceEvent;
 import io.zeebe.model.bpmn.Bpmn;
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 

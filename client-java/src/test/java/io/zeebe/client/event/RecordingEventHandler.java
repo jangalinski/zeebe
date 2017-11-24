@@ -18,6 +18,9 @@ package io.zeebe.client.event;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.zeebe.client.api.event.GeneralEvent;
+import io.zeebe.client.api.event.UniversalEventHandler;
+
 public class RecordingEventHandler implements UniversalEventHandler
 {
 

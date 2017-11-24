@@ -71,7 +71,7 @@ package io.zeebe;
 
 import java.util.Properties;
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.ZeebeClient;
 
 public class Application
 {
@@ -129,7 +129,7 @@ Add the following deploy command to the main class:
 ```java
 package io.zeebe;
 
-import io.zeebe.client.event.DeploymentEvent;
+import io.zeebe.client.api.event.DeploymentEvent;
 
 public class Application
 {
@@ -169,7 +169,7 @@ Add the following create command to the main class:
 ```java
 package io.zeebe;
 
-import io.zeebe.client.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
 
 public class Application
 {
@@ -233,7 +233,7 @@ Add the following lines to open a [task subscription] for the first tasks type:
 ```java
 package io.zeebe;
 
-import io.zeebe.client.task.TaskSubscription;
+import io.zeebe.client.api.task.TaskSubscription;
 
 public class Application
 {
@@ -381,7 +381,7 @@ Add the following lines to the main class:
 ```java
 package io.zeebe;
 
-import io.zeebe.client.event.TopicSubscription;
+import io.zeebe.client.api.event.TopicSubscription;
 
 public class Application
 {

@@ -17,11 +17,11 @@ package io.zeebe.client.workflow.impl;
 
 import java.io.InputStream;
 
-import io.zeebe.client.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.impl.RequestManager;
 import io.zeebe.client.impl.cmd.CommandImpl;
-import io.zeebe.client.workflow.cmd.UpdatePayloadCommand;
+import io.zeebe.client.api.workflow.cmd.UpdatePayloadCommand;
 import io.zeebe.util.EnsureUtil;
 
 public class UpdatePayloadCommandImpl extends CommandImpl<WorkflowInstanceEvent> implements UpdatePayloadCommand

@@ -15,15 +15,15 @@
  */
 package io.zeebe.client.impl;
 
-import io.zeebe.client.TasksClient;
-import io.zeebe.client.event.TaskEvent;
+import io.zeebe.client.api.TasksClient;
+import io.zeebe.client.api.event.TaskEvent;
 import io.zeebe.client.event.impl.TaskEventImpl;
-import io.zeebe.client.task.PollableTaskSubscriptionBuilder;
-import io.zeebe.client.task.TaskSubscriptionBuilder;
-import io.zeebe.client.task.cmd.CompleteTaskCommand;
-import io.zeebe.client.task.cmd.CreateTaskCommand;
-import io.zeebe.client.task.cmd.FailTaskCommand;
-import io.zeebe.client.task.cmd.UpdateTaskRetriesCommand;
+import io.zeebe.client.api.task.PollableTaskSubscriptionBuilder;
+import io.zeebe.client.api.task.TaskSubscriptionBuilder;
+import io.zeebe.client.api.task.cmd.CompleteTaskCommand;
+import io.zeebe.client.api.task.cmd.CreateTaskCommand;
+import io.zeebe.client.api.task.cmd.FailTaskCommand;
+import io.zeebe.client.api.task.cmd.UpdateTaskRetriesCommand;
 import io.zeebe.client.task.impl.CloseTaskSubscriptionCommandImpl;
 import io.zeebe.client.task.impl.CompleteTaskCommandImpl;
 import io.zeebe.client.task.impl.CreateTaskCommandImpl;

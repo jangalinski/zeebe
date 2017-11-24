@@ -17,9 +17,9 @@ package io.zeebe.client.event.impl;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import io.zeebe.client.event.Event;
-import io.zeebe.client.event.EventMetadata;
-import io.zeebe.client.event.TopicEventType;
+import io.zeebe.client.api.event.Event;
+import io.zeebe.client.api.event.EventMetadata;
+import io.zeebe.client.api.event.TopicEventType;
 
 public abstract class EventImpl implements Event
 {

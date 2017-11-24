@@ -27,7 +27,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.perftest.CommonProperties;
 import io.zeebe.perftest.reporter.FileReportWriter;
 import io.zeebe.perftest.reporter.RateReporter;

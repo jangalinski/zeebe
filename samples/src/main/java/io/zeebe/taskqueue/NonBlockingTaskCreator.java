@@ -21,11 +21,11 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.TasksClient;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.TasksClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.client.cmd.ClientCommandRejectedException;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.task.cmd.CreateTaskCommand;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.task.cmd.CreateTaskCommand;
 
 public class NonBlockingTaskCreator
 {

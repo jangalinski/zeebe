@@ -23,12 +23,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.zeebe.client.api.event.DeploymentEvent;
+import io.zeebe.client.api.event.DeploymentResource;
+import io.zeebe.client.api.event.ResourceType;
 import io.zeebe.client.cmd.ClientException;
-import io.zeebe.client.event.*;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.impl.RequestManager;
 import io.zeebe.client.impl.cmd.CommandImpl;
-import io.zeebe.client.workflow.cmd.CreateDeploymentCommand;
+import io.zeebe.client.api.workflow.cmd.CreateDeploymentCommand;
 import io.zeebe.model.bpmn.BpmnModelApi;
 import io.zeebe.model.bpmn.instance.WorkflowDefinition;
 import io.zeebe.protocol.Protocol;

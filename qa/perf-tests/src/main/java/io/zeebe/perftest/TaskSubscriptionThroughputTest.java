@@ -28,8 +28,8 @@ import java.util.concurrent.locks.LockSupport;
 import java.util.function.Supplier;
 
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.task.TaskSubscription;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.task.TaskSubscription;
 import io.zeebe.perftest.helper.TestHelper;
 import io.zeebe.perftest.reporter.FileReportWriter;
 import io.zeebe.perftest.reporter.RateReporter;

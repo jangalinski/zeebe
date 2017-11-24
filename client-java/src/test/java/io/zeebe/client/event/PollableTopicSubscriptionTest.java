@@ -18,12 +18,13 @@ package io.zeebe.client.event;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 
+import io.zeebe.client.api.event.PollableTopicSubscription;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
 
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.client.util.ClientRule;
 import io.zeebe.protocol.clientapi.EventType;
 import io.zeebe.test.broker.protocol.brokerapi.ExecuteCommandRequest;
@@ -145,9 +146,9 @@ public class PollableTopicSubscriptionTest
         broker.stubTopicSubscriptionApi(123L);
 
         final PollableTopicSubscription subscription = clientRule.topics().newPollableSubscription(clientRule.getDefaultTopicName())
-            .startAtHeadOfTopic()
-            .name(SUBSCRIPTION_NAME)
-            .open();
+                                                                 .startAtHeadOfTopic()
+                                                                 .name(SUBSCRIPTION_NAME)
+                                                                 .open();
 
         // when
         broker.closeTransport();

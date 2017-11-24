@@ -22,7 +22,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.zeebe.client.clustering.Topology;
+import io.zeebe.client.api.clustering.Topology;
 import io.zeebe.transport.ClientTransport;
 import io.zeebe.transport.RemoteAddress;
 import io.zeebe.transport.SocketAddress;
@@ -131,7 +131,7 @@ public class ClientTopologyManager implements Actor
         return nextRequestTimestamp < ClockUtil.getCurrentTimeInMillis() || !refreshFutures.isEmpty();
     }
 
-    protected void onNewTopology(TopologyResponse topologyResponse)
+    protected void onNewTopology(TopologyResponseImpl topologyResponse)
     {
         recordTopologyRefreshAttempt();
 

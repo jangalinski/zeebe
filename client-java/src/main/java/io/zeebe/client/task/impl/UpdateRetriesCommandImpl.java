@@ -15,12 +15,12 @@
  */
 package io.zeebe.client.task.impl;
 
-import io.zeebe.client.event.TaskEvent;
+import io.zeebe.client.api.event.TaskEvent;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.event.impl.TaskEventImpl;
 import io.zeebe.client.impl.RequestManager;
 import io.zeebe.client.impl.cmd.CommandImpl;
-import io.zeebe.client.task.cmd.UpdateTaskRetriesCommand;
+import io.zeebe.client.api.task.cmd.UpdateTaskRetriesCommand;
 import io.zeebe.util.EnsureUtil;
 
 public class UpdateRetriesCommandImpl extends CommandImpl<TaskEvent> implements UpdateTaskRetriesCommand

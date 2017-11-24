@@ -20,10 +20,10 @@ import java.util.function.Supplier;
 
 import org.junit.rules.ExternalResource;
 
-import io.zeebe.client.TasksClient;
-import io.zeebe.client.TopicsClient;
-import io.zeebe.client.WorkflowsClient;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.TasksClient;
+import io.zeebe.client.api.TopicsClient;
+import io.zeebe.client.api.WorkflowsClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.test.broker.protocol.brokerapi.StubBrokerRule;
 
 public class ClientRule extends ExternalResource

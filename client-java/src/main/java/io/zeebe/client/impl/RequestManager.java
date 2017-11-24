@@ -23,7 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.zeebe.client.clustering.impl.ClientTopologyManager;
 import io.zeebe.client.cmd.ClientException;
-import io.zeebe.client.event.Event;
+import io.zeebe.client.api.event.Event;
 import io.zeebe.client.impl.cmd.CommandImpl;
 import io.zeebe.client.task.impl.ControlMessageRequest;
 import io.zeebe.protocol.Protocol;

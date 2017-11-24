@@ -19,7 +19,10 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
-import io.zeebe.client.event.*;
+import io.zeebe.client.api.event.DeploymentEvent;
+import io.zeebe.client.api.event.DeploymentResource;
+import io.zeebe.client.api.event.TopicEventType;
+import io.zeebe.client.api.event.WorkflowDefinition;
 import io.zeebe.client.event.impl.EventImpl;
 
 public class DeploymentEventImpl extends EventImpl implements DeploymentEvent

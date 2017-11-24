@@ -15,8 +15,8 @@
  */
 package io.zeebe.client.event.impl;
 
-import io.zeebe.client.event.EventMetadata;
-import io.zeebe.client.event.TopicEventType;
+import io.zeebe.client.api.event.EventMetadata;
+import io.zeebe.client.api.event.TopicEventType;
 import io.zeebe.protocol.clientapi.ExecuteCommandRequestEncoder;
 
 public class EventMetadataImpl implements EventMetadata

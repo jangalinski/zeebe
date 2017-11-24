@@ -16,8 +16,8 @@
 package io.zeebe.client.event.impl;
 
 import io.zeebe.client.clustering.impl.ClientTopologyManager;
-import io.zeebe.client.event.PollableTopicSubscription;
-import io.zeebe.client.event.PollableTopicSubscriptionBuilder;
+import io.zeebe.client.api.event.PollableTopicSubscription;
+import io.zeebe.client.api.event.PollableTopicSubscriptionBuilder;
 import io.zeebe.client.task.impl.subscription.EventAcquisition;
 import io.zeebe.util.EnsureUtil;
 

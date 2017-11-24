@@ -17,12 +17,12 @@ package io.zeebe.client.event.impl;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import io.zeebe.client.event.PollableTopicSubscription;
-import io.zeebe.client.event.UniversalEventHandler;
-import io.zeebe.client.event.TopicSubscription;
+import io.zeebe.client.api.event.PollableTopicSubscription;
+import io.zeebe.client.api.event.UniversalEventHandler;
+import io.zeebe.client.api.event.TopicSubscription;
 import io.zeebe.client.task.impl.subscription.EventAcquisition;
 import io.zeebe.client.task.impl.subscription.EventSubscription;
-import io.zeebe.client.task.impl.subscription.EventSubscriptionCreationResult;
+import io.zeebe.client.api.task.subscription.EventSubscriptionCreationResult;
 import io.zeebe.util.CheckedConsumer;
 
 public class TopicSubscriptionImpl

@@ -30,26 +30,21 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
+import io.zeebe.broker.Broker;
+import io.zeebe.broker.it.ClientRule;
+import io.zeebe.client.api.TasksClient;
+import io.zeebe.client.api.TopicsClient;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.event.TopicSubscription;
+import io.zeebe.client.api.task.TaskSubscription;
+import io.zeebe.client.clustering.impl.ClientTopologyManager;
+import io.zeebe.client.impl.ZeebeClientImpl;
+import io.zeebe.transport.SocketAddress;
+import org.junit.*;
 import org.junit.rules.Timeout;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import io.zeebe.broker.Broker;
-import io.zeebe.broker.it.ClientRule;
-import io.zeebe.client.TasksClient;
-import io.zeebe.client.TopicsClient;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.clustering.impl.ClientTopologyManager;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.event.TopicSubscription;
-import io.zeebe.client.impl.ZeebeClientImpl;
-import io.zeebe.client.task.TaskSubscription;
-import io.zeebe.transport.SocketAddress;
 
 @Ignore("Unreliable cause of multiple problems: " +
     "https://github.com/zeebe-io/zeebe/issues/292 " +

@@ -15,8 +15,8 @@
  */
 package io.zeebe.client.event.impl;
 
+import io.zeebe.client.api.event.*;
 import io.zeebe.client.clustering.impl.ClientTopologyManager;
-import io.zeebe.client.event.*;
 import io.zeebe.client.impl.data.MsgPackMapper;
 import io.zeebe.client.task.impl.subscription.EventAcquisition;
 import io.zeebe.client.workflow.impl.WorkflowInstanceEventImpl;

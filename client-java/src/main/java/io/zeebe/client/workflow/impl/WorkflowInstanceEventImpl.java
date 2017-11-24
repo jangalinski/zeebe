@@ -18,8 +18,8 @@ package io.zeebe.client.workflow.impl;
 import java.io.InputStream;
 
 import com.fasterxml.jackson.annotation.*;
-import io.zeebe.client.event.TopicEventType;
-import io.zeebe.client.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.event.TopicEventType;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.impl.data.MsgPackConverter;
 import io.zeebe.client.task.impl.subscription.MsgPackField;

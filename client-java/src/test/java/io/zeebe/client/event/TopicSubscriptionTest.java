@@ -29,13 +29,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import io.zeebe.client.api.event.*;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.client.event.impl.TopicSubscriptionImpl;
 import io.zeebe.client.util.ClientRule;
 import io.zeebe.protocol.clientapi.ControlMessageType;

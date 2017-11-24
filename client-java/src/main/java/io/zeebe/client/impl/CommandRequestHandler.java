@@ -29,7 +29,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.zeebe.client.cmd.ClientCommandRejectedException;
 import io.zeebe.client.cmd.ClientException;
-import io.zeebe.client.event.EventMetadata;
+import io.zeebe.client.api.event.EventMetadata;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.event.impl.EventTypeMapping;
 import io.zeebe.client.impl.cmd.CommandImpl;

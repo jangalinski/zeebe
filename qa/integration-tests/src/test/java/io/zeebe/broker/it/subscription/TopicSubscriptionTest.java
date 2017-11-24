@@ -27,6 +27,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.zeebe.broker.it.ClientRule;
+import io.zeebe.broker.it.EmbeddedBrokerRule;
+import io.zeebe.client.ClientProperties;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.*;
+import io.zeebe.test.util.TestUtil;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Rule;
@@ -34,20 +41,6 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 import org.junit.rules.Timeout;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import io.zeebe.broker.it.ClientRule;
-import io.zeebe.broker.it.EmbeddedBrokerRule;
-import io.zeebe.client.ClientProperties;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.event.GeneralEvent;
-import io.zeebe.client.event.PollableTopicSubscription;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.event.TopicEventType;
-import io.zeebe.client.event.TopicSubscription;
-import io.zeebe.client.event.UniversalEventHandler;
-import io.zeebe.test.util.TestUtil;
 
 public class TopicSubscriptionTest
 {

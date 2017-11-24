@@ -19,15 +19,14 @@ import static io.zeebe.test.util.TestUtil.doRepeatedly;
 
 import java.util.Set;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.clustering.impl.TopicLeader;
-import io.zeebe.client.clustering.impl.TopologyResponse;
-import io.zeebe.client.cmd.Request;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.clustering.TopicLeader;
+import io.zeebe.client.api.clustering.TopologyResponse;
+import io.zeebe.client.api.cmd.Request;
 import io.zeebe.test.util.TestUtil;
 import io.zeebe.transport.SocketAddress;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class TopologyObserver
 {

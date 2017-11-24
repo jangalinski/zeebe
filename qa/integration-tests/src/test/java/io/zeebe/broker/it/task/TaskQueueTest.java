@@ -17,18 +17,17 @@ package io.zeebe.broker.it.task;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import io.zeebe.broker.it.ClientRule;
+import io.zeebe.broker.it.EmbeddedBrokerRule;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.cmd.BrokerErrorException;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 import org.junit.rules.Timeout;
-
-import io.zeebe.broker.it.ClientRule;
-import io.zeebe.broker.it.EmbeddedBrokerRule;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.cmd.BrokerErrorException;
-import io.zeebe.client.event.TaskEvent;
 
 /**
  * Tests the entire cycle of task creation, polling and completion as a smoke test for when something gets broken

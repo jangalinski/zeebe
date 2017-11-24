@@ -15,15 +15,16 @@
  */
 package io.zeebe.client.task.impl.subscription;
 
+import io.zeebe.client.api.task.subscription.EventSubscriptionCreationResult;
 import org.slf4j.Logger;
 
 import io.zeebe.client.event.impl.TaskEventImpl;
 import io.zeebe.client.impl.Loggers;
 import io.zeebe.client.impl.TasksClientImpl;
 import io.zeebe.client.impl.data.MsgPackMapper;
-import io.zeebe.client.task.PollableTaskSubscription;
-import io.zeebe.client.task.TaskHandler;
-import io.zeebe.client.task.TaskSubscription;
+import io.zeebe.client.api.task.PollableTaskSubscription;
+import io.zeebe.client.api.task.TaskHandler;
+import io.zeebe.client.api.task.TaskSubscription;
 import io.zeebe.client.task.impl.CreateTaskSubscriptionCommandImpl;
 
 public class TaskSubscriptionImpl

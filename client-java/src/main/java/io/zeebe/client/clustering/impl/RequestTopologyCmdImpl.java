@@ -17,6 +17,7 @@ package io.zeebe.client.clustering.impl;
 
 import java.util.HashMap;
 
+import io.zeebe.client.api.clustering.TopologyResponse;
 import io.zeebe.client.impl.RequestManager;
 import io.zeebe.client.task.impl.ControlMessageRequest;
 import io.zeebe.protocol.clientapi.ControlMessageType;

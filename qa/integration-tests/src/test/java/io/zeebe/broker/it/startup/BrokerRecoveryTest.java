@@ -34,11 +34,13 @@ import io.zeebe.broker.it.ClientRule;
 import io.zeebe.broker.it.EmbeddedBrokerRule;
 import io.zeebe.broker.it.util.RecordingTaskHandler;
 import io.zeebe.broker.it.util.TopicEventRecorder;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.clustering.impl.TopicLeader;
-import io.zeebe.client.clustering.impl.TopologyResponse;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.clustering.TopicLeader;
+import io.zeebe.client.api.clustering.TopologyResponse;
+import io.zeebe.client.api.event.DeploymentEvent;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
 import io.zeebe.client.cmd.ClientCommandRejectedException;
-import io.zeebe.client.event.*;
 import io.zeebe.model.bpmn.Bpmn;
 import io.zeebe.model.bpmn.instance.WorkflowDefinition;
 import io.zeebe.raft.Raft;
@@ -49,8 +51,12 @@ import io.zeebe.test.util.TestUtil;
 import io.zeebe.transport.SocketAddress;
 import io.zeebe.util.time.ClockUtil;
 import org.assertj.core.util.Files;
-import org.junit.*;
-import org.junit.rules.*;
+import org.junit.After;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
+import org.junit.rules.RuleChain;
+import org.junit.rules.TemporaryFolder;
 
 public class BrokerRecoveryTest
 {
@@ -237,17 +243,17 @@ public class BrokerRecoveryTest
         restartBroker();
 
         final DeploymentEvent deploymentResult = clientRule.workflows().deploy(clientRule.getDefaultTopic())
-            .addWorkflowModel(WORKFLOW, "workflow.bpmn")
-            .execute();
+                                                           .addWorkflowModel(WORKFLOW, "workflow.bpmn")
+                                                           .execute();
 
         // then
         assertThat(deploymentResult.getDeployedWorkflows().get(0).getVersion()).isEqualTo(2);
 
         final WorkflowInstanceEvent workflowInstanceV1 = clientRule.workflows()
-            .create(clientRule.getDefaultTopic())
-            .bpmnProcessId("process")
-            .version(1)
-            .execute();
+                                                                   .create(clientRule.getDefaultTopic())
+                                                                   .bpmnProcessId("process")
+                                                                   .version(1)
+                                                                   .execute();
 
         final WorkflowInstanceEvent workflowInstanceV2 = clientRule.workflows()
             .create(clientRule.getDefaultTopic())

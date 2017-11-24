@@ -24,18 +24,13 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.function.Supplier;
 
-import org.junit.rules.ExternalResource;
-import org.slf4j.Logger;
-
 import io.zeebe.broker.Broker;
 import io.zeebe.broker.transport.TransportServiceNames;
-import io.zeebe.servicecontainer.Service;
-import io.zeebe.servicecontainer.ServiceContainer;
-import io.zeebe.servicecontainer.ServiceName;
-import io.zeebe.servicecontainer.ServiceStartContext;
-import io.zeebe.servicecontainer.ServiceStopContext;
+import io.zeebe.servicecontainer.*;
 import io.zeebe.servicecontainer.impl.ServiceContainerImpl;
 import io.zeebe.util.allocation.DirectBufferAllocator;
+import org.junit.rules.ExternalResource;
+import org.slf4j.Logger;
 
 public class EmbeddedBrokerRule extends ExternalResource
 {

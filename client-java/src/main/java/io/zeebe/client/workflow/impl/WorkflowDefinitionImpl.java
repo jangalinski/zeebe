@@ -15,7 +15,7 @@
  */
 package io.zeebe.client.workflow.impl;
 
-import io.zeebe.client.event.WorkflowDefinition;
+import io.zeebe.client.api.event.WorkflowDefinition;
 
 public class WorkflowDefinitionImpl implements WorkflowDefinition
 {

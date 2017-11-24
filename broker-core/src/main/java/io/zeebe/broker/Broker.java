@@ -19,6 +19,7 @@ package io.zeebe.broker;
 
 import java.io.InputStream;
 
+import io.zeebe.broker.api.ZeebeBroker;
 import io.zeebe.broker.clustering.ClusterComponent;
 import io.zeebe.broker.logstreams.LogStreamsComponent;
 import io.zeebe.broker.system.ConfigurationManager;
@@ -29,7 +30,7 @@ import io.zeebe.broker.transport.TransportComponent;
 import io.zeebe.broker.workflow.WorkflowComponent;
 import org.slf4j.Logger;
 
-public class Broker implements AutoCloseable
+public class Broker implements ZeebeBroker
 {
     public static final Logger LOG = Loggers.SYSTEM_LOGGER;
 
@@ -65,7 +66,8 @@ public class Broker implements AutoCloseable
         start();
     }
 
-    protected void start()
+    @Override
+    public void start()
     {
         LOG.info("Version: {}", VERSION);
 

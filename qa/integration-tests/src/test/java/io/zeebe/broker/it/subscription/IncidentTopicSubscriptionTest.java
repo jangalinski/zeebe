@@ -24,12 +24,14 @@ import java.util.List;
 
 import io.zeebe.broker.it.ClientRule;
 import io.zeebe.broker.it.EmbeddedBrokerRule;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.event.*;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.*;
 import io.zeebe.model.bpmn.Bpmn;
 import io.zeebe.model.bpmn.instance.WorkflowDefinition;
 import io.zeebe.test.util.TestUtil;
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.RuleChain;
 
 public class IncidentTopicSubscriptionTest
@@ -67,8 +69,8 @@ public class IncidentTopicSubscriptionTest
     {
         // given
         final WorkflowInstanceEvent workflowInstance = clientRule.workflows().create(clientRule.getDefaultTopic())
-            .bpmnProcessId("process")
-            .execute();
+                                                                 .bpmnProcessId("process")
+                                                                 .execute();
 
         final RecordingIncidentEventHandler handler = new RecordingIncidentEventHandler();
 

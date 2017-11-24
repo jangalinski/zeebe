@@ -15,11 +15,11 @@
  */
 package io.zeebe.client.event.impl;
 
-import io.zeebe.client.TopicsClient;
-import io.zeebe.client.cmd.Request;
-import io.zeebe.client.event.Event;
-import io.zeebe.client.event.PollableTopicSubscriptionBuilder;
-import io.zeebe.client.event.TopicSubscriptionBuilder;
+import io.zeebe.client.api.TopicsClient;
+import io.zeebe.client.api.cmd.Request;
+import io.zeebe.client.api.event.Event;
+import io.zeebe.client.api.event.PollableTopicSubscriptionBuilder;
+import io.zeebe.client.api.event.TopicSubscriptionBuilder;
 import io.zeebe.client.impl.ZeebeClientImpl;
 import io.zeebe.client.topic.impl.CreateTopicCommandImpl;
 

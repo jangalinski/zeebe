@@ -17,12 +17,12 @@ package io.zeebe.client.workflow.impl;
 
 import java.io.InputStream;
 
-import io.zeebe.client.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.impl.RequestManager;
 import io.zeebe.client.impl.cmd.CommandImpl;
 import io.zeebe.client.impl.data.MsgPackConverter;
-import io.zeebe.client.workflow.cmd.CreateWorkflowInstanceCommand;
+import io.zeebe.client.api.workflow.cmd.CreateWorkflowInstanceCommand;
 
 /**
  * Represents a command to create a workflow instance.

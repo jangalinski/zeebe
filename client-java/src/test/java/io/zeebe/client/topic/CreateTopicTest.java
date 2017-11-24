@@ -23,8 +23,8 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.event.Event;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.Event;
 import io.zeebe.client.util.ClientRule;
 import io.zeebe.protocol.Protocol;
 import io.zeebe.protocol.clientapi.EventType;

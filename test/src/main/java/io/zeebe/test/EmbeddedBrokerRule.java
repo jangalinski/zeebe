@@ -19,12 +19,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.function.Supplier;
 
-import io.zeebe.broker.Broker;
+import io.zeebe.broker.api.ZeebeBroker;
 import org.junit.rules.ExternalResource;
 
 public class EmbeddedBrokerRule extends ExternalResource
 {
-    private Broker broker;
+    private ZeebeBroker broker;
     private Supplier<InputStream> configSupplier;
 
     public EmbeddedBrokerRule()
@@ -47,7 +47,14 @@ public class EmbeddedBrokerRule extends ExternalResource
     @Override
     protected void after()
     {
-        broker.close();
+        try
+        {
+            broker.close();
+        }
+        catch (Exception e)
+        {
+            throw new IllegalStateException(e);
+        }
 
         broker = null;
         System.gc();
@@ -57,7 +64,7 @@ public class EmbeddedBrokerRule extends ExternalResource
     {
         try (InputStream configStream = configSupplier.get())
         {
-            broker = new Broker(configStream);
+            broker = ZeebeBroker.create(configStream);
         }
         catch (final IOException e)
         {

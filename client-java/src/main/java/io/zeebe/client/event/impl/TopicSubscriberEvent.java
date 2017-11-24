@@ -19,9 +19,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import io.zeebe.client.event.TopicEventType;
+import io.zeebe.client.api.event.TopicEventType;
 import io.zeebe.client.impl.cmd.ReceiverAwareResponseResult;
-import io.zeebe.client.task.impl.subscription.EventSubscriptionCreationResult;
+import io.zeebe.client.api.task.subscription.EventSubscriptionCreationResult;
 import io.zeebe.transport.RemoteAddress;
 
 public class TopicSubscriberEvent extends EventImpl implements EventSubscriptionCreationResult, ReceiverAwareResponseResult

@@ -53,7 +53,7 @@ public class ClientTopologyController
     protected final InitState initState = new InitState();
 
     private final ClientOutput output;
-    protected final Consumer<TopologyResponse> successCallback;
+    protected final Consumer<TopologyResponseImpl> successCallback;
     protected final Consumer<Exception> failureCallback;
 
     protected final ControlMessageRequestHandler requestHandler;
@@ -61,7 +61,7 @@ public class ClientTopologyController
     public ClientTopologyController(
             final ClientTransport clientTransport,
             final ObjectMapper objectMapper,
-            final Consumer<TopologyResponse> successCallback,
+            final Consumer<TopologyResponseImpl> successCallback,
             final Consumer<Exception> failureCallback)
     {
         output = clientTransport.getOutput();
@@ -141,7 +141,7 @@ public class ClientTopologyController
                 try
                 {
                     final DirectBuffer response = request.get();
-                    final TopologyResponse topologyResponse = decodeTopology(response);
+                    final TopologyResponseImpl topologyResponse = decodeTopology(response);
                     successCallback.accept(topologyResponse);
                 }
                 catch (Exception e)
@@ -173,7 +173,7 @@ public class ClientTopologyController
         }
     }
 
-    protected TopologyResponse decodeTopology(DirectBuffer encodedTopology)
+    protected TopologyResponseImpl decodeTopology(DirectBuffer encodedTopology)
     {
         messageHeaderDecoder.wrap(encodedTopology, 0);
 
@@ -186,7 +186,7 @@ public class ClientTopologyController
         {
             try
             {
-                return (TopologyResponse) requestHandler.getResult(encodedTopology, responseMessageOffset, blockLength, version);
+                return (TopologyResponseImpl) requestHandler.getResult(encodedTopology, responseMessageOffset, blockLength, version);
             }
             catch (final Exception e)
             {

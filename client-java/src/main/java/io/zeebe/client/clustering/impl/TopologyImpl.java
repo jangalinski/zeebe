@@ -15,19 +15,15 @@
  */
 package io.zeebe.client.clustering.impl;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
-import org.agrona.collections.Int2ObjectHashMap;
-
-import io.zeebe.client.clustering.Topology;
+import io.zeebe.client.api.clustering.TopicLeader;
+import io.zeebe.client.api.clustering.Topology;
 import io.zeebe.transport.ClientTransport;
 import io.zeebe.transport.RemoteAddress;
 import io.zeebe.transport.SocketAddress;
 import io.zeebe.util.CollectionUtil;
+import org.agrona.collections.Int2ObjectHashMap;
 
 
 public class TopologyImpl implements Topology
@@ -83,7 +79,7 @@ public class TopologyImpl implements Topology
             '}';
     }
 
-    public void update(TopologyResponse topologyDto, ClientTransport transport)
+    public void update(TopologyResponseImpl topologyDto, ClientTransport transport)
     {
         for (SocketAddress addr : topologyDto.getBrokers())
         {

@@ -32,14 +32,14 @@ import org.junit.rules.RuleChain;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.event.TopicEventType;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.event.TopicEventType;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.impl.RequestManager;
 import io.zeebe.client.impl.ZeebeClientImpl;
 import io.zeebe.client.impl.cmd.CommandImpl;
-import io.zeebe.client.task.cmd.CreateTaskCommand;
+import io.zeebe.client.api.task.cmd.CreateTaskCommand;
 import io.zeebe.client.util.ClientRule;
 import io.zeebe.protocol.Protocol;
 import io.zeebe.protocol.clientapi.ErrorCode;

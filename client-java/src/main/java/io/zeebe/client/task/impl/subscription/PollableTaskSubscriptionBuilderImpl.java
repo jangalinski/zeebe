@@ -20,8 +20,8 @@ import java.time.Duration;
 import io.zeebe.client.clustering.impl.ClientTopologyManager;
 import io.zeebe.client.impl.TasksClientImpl;
 import io.zeebe.client.impl.data.MsgPackMapper;
-import io.zeebe.client.task.PollableTaskSubscription;
-import io.zeebe.client.task.PollableTaskSubscriptionBuilder;
+import io.zeebe.client.api.task.PollableTaskSubscription;
+import io.zeebe.client.api.task.PollableTaskSubscriptionBuilder;
 import io.zeebe.util.EnsureUtil;
 
 public class PollableTaskSubscriptionBuilderImpl implements PollableTaskSubscriptionBuilder

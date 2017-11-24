@@ -29,7 +29,7 @@ import java.util.function.Supplier;
 import org.HdrHistogram.Histogram;
 
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.perftest.CommonProperties;
 
 public abstract class FixedRateLatencyTest

@@ -25,10 +25,11 @@ import java.util.Properties;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutionException;
 
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.client.cmd.ClientCommandRejectedException;
 import io.zeebe.client.cmd.ClientException;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.event.TopicSubscription;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.event.TopicSubscription;
 import io.zeebe.client.event.impl.TaskEventImpl;
 import io.zeebe.client.impl.ZeebeClientImpl;
 import io.zeebe.client.util.Events;

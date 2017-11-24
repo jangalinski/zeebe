@@ -20,17 +20,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+import io.zeebe.broker.it.ClientRule;
+import io.zeebe.broker.it.EmbeddedBrokerRule;
+import io.zeebe.client.api.TopicsClient;
+import io.zeebe.client.api.event.Event;
+import io.zeebe.client.api.event.TaskEvent;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 import org.junit.rules.Timeout;
-
-import io.zeebe.broker.it.ClientRule;
-import io.zeebe.broker.it.EmbeddedBrokerRule;
-import io.zeebe.client.TopicsClient;
-import io.zeebe.client.event.Event;
-import io.zeebe.client.event.TaskEvent;
 
 public class CreateTopicTest
 {

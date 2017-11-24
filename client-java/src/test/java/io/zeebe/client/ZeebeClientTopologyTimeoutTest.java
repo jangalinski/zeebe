@@ -21,13 +21,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.time.Duration;
 import java.util.Properties;
 
+import io.zeebe.client.api.ZeebeClient;
 import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import io.zeebe.client.cmd.ClientException;
-import io.zeebe.client.event.TaskEvent;
+import io.zeebe.client.api.event.TaskEvent;
 import io.zeebe.client.event.impl.TaskEventImpl;
 import io.zeebe.client.util.Events;
 import io.zeebe.protocol.clientapi.ControlMessageType;

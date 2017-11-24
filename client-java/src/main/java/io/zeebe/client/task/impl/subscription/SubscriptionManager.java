@@ -16,8 +16,8 @@
 package io.zeebe.client.task.impl.subscription;
 
 import io.zeebe.client.clustering.impl.ClientTopologyManager;
-import io.zeebe.client.event.PollableTopicSubscriptionBuilder;
-import io.zeebe.client.event.TopicSubscriptionBuilder;
+import io.zeebe.client.api.event.PollableTopicSubscriptionBuilder;
+import io.zeebe.client.api.event.TopicSubscriptionBuilder;
 import io.zeebe.client.event.impl.PollableTopicSubscriptionBuilderImpl;
 import io.zeebe.client.event.impl.TopicClientImpl;
 import io.zeebe.client.event.impl.TopicSubscriptionBuilderImpl;
@@ -25,8 +25,8 @@ import io.zeebe.client.event.impl.TopicSubscriptionImpl;
 import io.zeebe.client.impl.TasksClientImpl;
 import io.zeebe.client.impl.ZeebeClientImpl;
 import io.zeebe.client.impl.data.MsgPackMapper;
-import io.zeebe.client.task.PollableTaskSubscriptionBuilder;
-import io.zeebe.client.task.TaskSubscriptionBuilder;
+import io.zeebe.client.api.task.PollableTaskSubscriptionBuilder;
+import io.zeebe.client.api.task.TaskSubscriptionBuilder;
 import io.zeebe.transport.ClientInputMessageSubscription;
 import io.zeebe.transport.RemoteAddress;
 import io.zeebe.transport.TransportListener;

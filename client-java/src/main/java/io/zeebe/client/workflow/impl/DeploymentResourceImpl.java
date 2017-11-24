@@ -17,8 +17,8 @@ package io.zeebe.client.workflow.impl;
 
 import java.nio.charset.StandardCharsets;
 
-import io.zeebe.client.event.DeploymentResource;
-import io.zeebe.client.event.ResourceType;
+import io.zeebe.client.api.event.DeploymentResource;
+import io.zeebe.client.api.event.ResourceType;
 
 public class DeploymentResourceImpl implements DeploymentResource
 {

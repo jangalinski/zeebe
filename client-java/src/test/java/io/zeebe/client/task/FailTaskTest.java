@@ -23,9 +23,9 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 
-import io.zeebe.client.TasksClient;
+import io.zeebe.client.api.TasksClient;
 import io.zeebe.client.cmd.ClientCommandRejectedException;
-import io.zeebe.client.event.TaskEvent;
+import io.zeebe.client.api.event.TaskEvent;
 import io.zeebe.client.event.impl.TaskEventImpl;
 import io.zeebe.client.util.ClientRule;
 import io.zeebe.client.util.Events;

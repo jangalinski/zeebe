@@ -17,8 +17,8 @@ package io.zeebe.client.impl.cmd;
 
 import java.util.concurrent.Future;
 
-import io.zeebe.client.cmd.Request;
-import io.zeebe.client.event.Event;
+import io.zeebe.client.api.cmd.Request;
+import io.zeebe.client.api.event.Event;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.impl.RequestManager;
 

@@ -19,9 +19,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import io.zeebe.client.TasksClient;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.task.TaskHandler;
+import io.zeebe.client.api.TasksClient;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.task.TaskHandler;
 
 public class RecordingTaskHandler implements TaskHandler
 {

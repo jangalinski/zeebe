@@ -22,8 +22,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import io.zeebe.broker.it.ClientRule;
-import io.zeebe.client.TopicsClient;
-import io.zeebe.client.event.*;
+import io.zeebe.client.api.TopicsClient;
+import io.zeebe.client.api.event.*;
 import org.junit.rules.ExternalResource;
 
 public class TopicEventRecorder extends ExternalResource

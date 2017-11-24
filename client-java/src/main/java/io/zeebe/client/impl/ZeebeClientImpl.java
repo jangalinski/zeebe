@@ -20,20 +20,17 @@ import static io.zeebe.client.ClientProperties.CLIENT_SENDBUFFER_SIZE;
 
 import java.util.Properties;
 
-import org.msgpack.jackson.dataformat.MessagePackFactory;
-
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.InjectableValues;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.WorkflowsClient;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.WorkflowsClient;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.clustering.TopologyResponse;
+import io.zeebe.client.api.cmd.Request;
 import io.zeebe.client.clustering.impl.ClientTopologyManager;
 import io.zeebe.client.clustering.impl.RequestTopologyCmdImpl;
-import io.zeebe.client.clustering.impl.TopologyResponse;
-import io.zeebe.client.cmd.Request;
 import io.zeebe.client.event.impl.TopicClientImpl;
 import io.zeebe.client.impl.data.MsgPackConverter;
 import io.zeebe.client.task.impl.subscription.SubscriptionManager;
@@ -46,6 +43,7 @@ import io.zeebe.transport.Transports;
 import io.zeebe.util.actor.ActorReference;
 import io.zeebe.util.actor.ActorScheduler;
 import io.zeebe.util.actor.ActorSchedulerBuilder;
+import org.msgpack.jackson.dataformat.MessagePackFactory;
 import org.slf4j.Logger;
 
 public class ZeebeClientImpl implements ZeebeClient

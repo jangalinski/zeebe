@@ -17,12 +17,12 @@ package io.zeebe.client.task.impl;
 
 import java.io.InputStream;
 
-import io.zeebe.client.event.TaskEvent;
+import io.zeebe.client.api.event.TaskEvent;
 import io.zeebe.client.event.impl.EventImpl;
 import io.zeebe.client.event.impl.TaskEventImpl;
 import io.zeebe.client.impl.RequestManager;
 import io.zeebe.client.impl.cmd.CommandImpl;
-import io.zeebe.client.task.cmd.CompleteTaskCommand;
+import io.zeebe.client.api.task.cmd.CompleteTaskCommand;
 import io.zeebe.util.EnsureUtil;
 
 public class CompleteTaskCommandImpl extends CommandImpl<TaskEvent> implements CompleteTaskCommand

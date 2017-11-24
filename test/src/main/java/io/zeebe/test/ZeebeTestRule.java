@@ -26,9 +26,9 @@ import java.util.Properties;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.event.WorkflowInstanceEvent;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.event.WorkflowInstanceEvent;
 import org.junit.rules.ExternalResource;
 
 public class ZeebeTestRule extends ExternalResource

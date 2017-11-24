@@ -23,9 +23,9 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.util.*;
 
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.client.cmd.ClientCommandRejectedException;
-import io.zeebe.client.event.DeploymentEvent;
+import io.zeebe.client.api.event.DeploymentEvent;
 import io.zeebe.client.util.ClientRule;
 import io.zeebe.model.bpmn.Bpmn;
 import io.zeebe.model.bpmn.instance.WorkflowDefinition;
@@ -38,7 +38,7 @@ import org.junit.rules.RuleChain;
 
 public class CreateDeploymentTest
 {
-    private static final WorkflowDefinition WORKFLOW_MODEL = Bpmn.createExecutableWorkflow("process")
+    private static final io.zeebe.model.bpmn.instance.WorkflowDefinition WORKFLOW_MODEL = Bpmn.createExecutableWorkflow("process")
             .startEvent()
             .done();
 

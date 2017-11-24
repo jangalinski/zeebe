@@ -22,19 +22,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.zeebe.broker.it.ClientRule;
+import io.zeebe.broker.it.EmbeddedBrokerRule;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.TaskEvent;
+import io.zeebe.client.api.event.TaskEventHandler;
+import io.zeebe.test.util.TestUtil;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.RuleChain;
 import org.junit.rules.Timeout;
-
-import io.zeebe.broker.it.ClientRule;
-import io.zeebe.broker.it.EmbeddedBrokerRule;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.event.TaskEvent;
-import io.zeebe.client.event.TaskEventHandler;
-import io.zeebe.test.util.TestUtil;
 
 public class TaskTopicSubscriptionTest
 {

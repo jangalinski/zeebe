@@ -20,9 +20,9 @@ import java.util.Properties;
 import java.util.Scanner;
 
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.ZeebeClient;
+import io.zeebe.client.api.ZeebeClient;
 import io.zeebe.client.impl.ZeebeClientImpl;
-import io.zeebe.client.task.TaskSubscription;
+import io.zeebe.client.api.task.TaskSubscription;
 
 public class WorkflowInstanceWorker
 {

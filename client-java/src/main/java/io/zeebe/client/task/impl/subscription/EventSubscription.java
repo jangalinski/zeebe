@@ -19,6 +19,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import io.zeebe.client.api.task.subscription.EventSubscriptionCreationResult;
 import org.agrona.concurrent.ManyToManyConcurrentArrayQueue;
 import org.slf4j.Logger;
 

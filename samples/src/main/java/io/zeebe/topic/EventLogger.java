@@ -19,9 +19,9 @@ import java.util.Properties;
 import java.util.Scanner;
 
 import io.zeebe.client.ClientProperties;
-import io.zeebe.client.ZeebeClient;
-import io.zeebe.client.event.EventMetadata;
-import io.zeebe.client.event.TopicSubscription;
+import io.zeebe.client.api.ZeebeClient;
+import io.zeebe.client.api.event.EventMetadata;
+import io.zeebe.client.api.event.TopicSubscription;
 import io.zeebe.client.impl.ZeebeClientImpl;
 
 public class EventLogger
